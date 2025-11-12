@@ -1,0 +1,27 @@
+services:
+  app:
+    build: ./app
+    container_name: counter_app
+    ports:
+      - "5000:5000"
+    environment:
+      - REDIS_HOST=redis_db
+    depends_on:
+      - redis_db
+    networks:
+      - shared_net
+
+  redis_db:
+    image: redis:alpine
+    container_name: counter_redis
+    networks:
+      - shared_net
+    volumes:
+      - redis_data:/data
+
+ volumes:
+   redis_data:
+
+networks:
+  shared_net:
+    name: counter_network
