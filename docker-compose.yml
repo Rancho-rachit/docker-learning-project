@@ -19,7 +19,7 @@ services:
     volumes:
       - redis_data:/data
 
- volumes:
+volumes:
    redis_data:
 
 networks:
