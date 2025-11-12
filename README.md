@@ -12,10 +12,10 @@ To run this project
 
 ```bash
 # Clone the repository
-git clone https://github.com/Rancho-rachit/Devops-Docker-Learning-Project.git
+git clone https://github.com/Rancho-rachit/docker-learning-project.git
 
 # Navigate into the project directory
-cd Devops-Docker-Learning-Project
+cd docker-learning-project
 
 # Build and start the containers in detached mode
 docker compose up --build -d
